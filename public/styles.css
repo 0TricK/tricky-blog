@@ -1,18 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
 .nav, .nav-elements {
     display: flex;
-    flex-direction: row;
+    flex-direction: row;;
     align-items: center;
-    font-family: "inter";
+    font-family: "inter", sans-serif;
 }
 
 .nav {
-    justify-content: space-between;
+    background-color: #f1ffe5;
     padding: 1em;
 }
 
+.logo, .create-blog {
+    text-justify: center;
+    flex: 1;
+}
+
+.logo h1 {
+    text-align: center;
+}
+
+.create-blog {
+    text-align: right;
+}
+
 .nav-elements {
-    justify-content: space-around;
-    width: 30%;
+    gap: 2rem;
 }
 
 .nav a {
@@ -20,9 +38,43 @@
     color: black;
     font-size: 1.2em;
     font-weight: bold;
-    margin: 1rem;
+    margin: 0 1rem;
 }
 
 .nav-elements a:hover, .create-blog a:hover {
     color: #555;
+}
+
+.blog-form form {
+    font-family: "noto sans", sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.blog-form input, .blog-form textarea {
+    display: block;
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.blog-form button {
+    padding: 0.5em 1em;
+    background-color: #3fb34b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.blog-form button:hover {
+    background-color: #36903f;
+}
+
+.blog-form h1 {
+    font-family: "noto sans", sans-serif;
+    text-align: center;
+    margin-bottom: 2em;
 }
