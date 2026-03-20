@@ -1,0 +1,28 @@
+.nav, .nav-elements {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: "inter";
+}
+
+.nav {
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.nav-elements {
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.nav-elements a:hover, .create-blog a:hover {
+    color: #555;
+}
