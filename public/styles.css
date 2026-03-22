@@ -4,6 +4,7 @@ body {
     background-color: white;
 }
 
+/* Navigation Bar styles */
 .nav, .nav-elements {
     display: flex;
     flex-direction: row;;
@@ -12,26 +13,28 @@ body {
 }
 
 .nav {
-    background-color: #f1ffe5;
-    padding: 1em;
-}
-
-.logo, .create-blog {
-    text-justify: center;
-    flex: 1;
+    margin: 0 12px;
+    border-style: groove;
+    border-width: 0 0 4px 0;
+    border-color: #70be8d;
+    background-color: #ffffff;
+    justify-content: space-between;
+    padding: 1em 0 0.5em 0;
 }
 
 .logo h1 {
-    text-align: center;
+    text-align: left;
 }
 
 .create-blog {
-    text-align: right;
+    display: flex;
+    background-color: #70be8d;
+    border-radius: 2em;
+    height: 3em;
+    margin: 0 2em;
+    align-items: center;
 }
 
-.nav-elements {
-    gap: 2rem;
-}
 
 .nav a {
     text-decoration: none;
@@ -42,9 +45,11 @@ body {
 }
 
 .nav-elements a:hover, .create-blog a:hover {
-    color: #555;
+    color: #565656;
 }
 
+
+/* Create blog tab styles */
 .blog-form form {
     font-family: "noto sans", sans-serif;
     max-width: 400px;
