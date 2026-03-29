@@ -3,6 +3,7 @@ const http = require('http');
 const express = require('express');
 const mongoose = require('mongoose');
 const blogRoutes = require('./routes/blogRoutes');
+const morgan = require('morgan');
 
 //defines where server is hosted
 const app = express();
@@ -19,6 +20,7 @@ app.set('view engine', 'ejs');
 //static files
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
+app.use(morgan('dev'));
 
 app.get('/', (req, res) => {
 
