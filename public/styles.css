@@ -1,19 +1,33 @@
+/* default styles */
 body {
+    font-family: "noto sans", sans-serif;
     margin: 0;
     padding: 0;
+    margin: 0 2em;
     background-color: white;
 }
+
+h2 {
+    font-family: "inter", sans-serif;
+    text-align: left;
+    font-size: 48px;
+}
+
+.default-content p {
+    font-size: 22px;
+}
+
+
 
 /* Navigation Bar styles */
 .nav, .nav-elements {
     display: flex;
     flex-direction: row;;
     align-items: center;
-    font-family: "inter", sans-serif;
 }
 
 .nav {
-    margin: 0 12px;
+    font-size: 1.2em;
     border-style: groove;
     border-width: 0 0 4px 0;
     border-color: #70be8d;
@@ -26,13 +40,14 @@ body {
     text-align: left;
 }
 
-.create-blog {
+.create-blog , .delete-blog {
     display: flex;
     background-color: #70be8d;
     border-radius: 2em;
     height: 3em;
     margin: 0 2em;
     align-items: center;
+    justify-content: center;
 }
 
 
@@ -51,7 +66,7 @@ body {
 
 /* Create blog tab styles */
 .blog-form form {
-    font-family: "noto sans", sans-serif;
+
     max-width: 400px;
     margin: 0 auto;
 }
@@ -79,7 +94,69 @@ body {
 }
 
 .blog-form h1 {
-    font-family: "noto sans", sans-serif;
+
     text-align: center;
     margin-bottom: 2em;
 }
+
+
+/* Blogs page styles */
+/* Blog list styles */
+.blog-item {
+    max-width: 800px;
+    margin: 1em 4em;
+    padding: 0 1em;
+
+    font-size: 24px;
+    border-style: solid;
+    border-width: 0 0 0 4px;
+    border-color: #36903f;
+}
+
+.blog-item a {
+    text-decoration: none;
+    color: black;
+}
+
+.blog-item a:hover {
+    color: #565656;
+}
+
+/* Specific blog page styles */
+/* Blog details styles */
+#blog-header {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 32px;
+    color: #70be8d;
+    margin: 0 2em;
+    padding-top: 1em;
+    height: 2em;
+}
+
+#created-at {
+    font-size: 22px;
+}
+
+#details-content p {
+    font-size: 22px;
+    margin: 2em 4em;
+    padding: 0 1em;
+}
+
+#details-content #snippet {
+    font-weight: bold;
+}
+
+.delete-blog {
+    font-weight: bold;
+    margin-left: 4em;
+    width: 6em;
+}
+
+.delete-blog:hover {
+    cursor: pointer;
+}
+

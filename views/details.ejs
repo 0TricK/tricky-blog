@@ -1,0 +1,34 @@
+<html lang="en">
+<%- include('./partials/head') %>
+
+<body>
+<%- include('./partials/nav') %>
+    <div id="details-content">
+        <div id="blog-header">
+            <h2 id="details-title"><%= blog.title %></h2>
+            <h2 id="created-at">Created on: <%= blog.createdAt.toDateString() %></h2>
+        </div>
+        <p id="snippet"><%= blog.snippet %></p>
+        <p id="body"><%= blog.body %></p>
+        <div class="delete-blog">
+            <a class="delete" data-doc="<%= blog._id %>">DELETE</a>
+        </div>
+    </div>
+
+    <script>
+        const deleteBtn = document.querySelector('a.delete');
+        deleteBtn.addEventListener('click', (e) => {
+            const endpoint = `/blogs/${deleteBtn.dataset.doc}`;
+            fetch(endpoint, {
+                method: 'DELETE'
+            })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data);
+                window.location.href = data.redirect;
+            })
+            .catch((err) => console.log(err));
+        });
+    </script>
+</body>
+</html>
